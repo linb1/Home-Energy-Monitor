@@ -8,7 +8,7 @@ manager.update()
 devi = manager.outlets[0]
 devi.turn_on()
 
-# Getd energy usage data
+# Gets energy usage data
 devi.update_energy()
 devi.display()
 
