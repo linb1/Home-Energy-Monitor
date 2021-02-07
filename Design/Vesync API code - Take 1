@@ -1,0 +1,14 @@
+#coded with help from the pyvesync library
+
+from pyvesync import VeSync
+
+manager = VeSync("alikat@bu.edu", "12345678", time_zone=DEFAULT_TZ)
+manager.login()
+manager.update()
+devi = manager.outlets[0]
+devi.turn_on()
+
+# Getd energy usage data
+devi.update_energy()
+devi.display()
+
