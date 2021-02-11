@@ -1,0 +1,52 @@
+.navbar {
+    height: 100%;
+    width: 175px;
+    background-color: #141619;
+    float: left;
+}
+
+.navbar .navbar-list {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .navbar-item {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar .navbar-item:hover {
+    background-color: black;
+}
+
+.navbar .active {
+    background-color: black;
+}
+
+.navbar .nav-title {
+    margin-left: 20px;
+}
+
+.greener-living-logo {
+    height: 75px;
+    width: 120px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
