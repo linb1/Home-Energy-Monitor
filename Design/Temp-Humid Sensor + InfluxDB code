@@ -1,6 +1,9 @@
 # Credit to Sam McGeown and his guide here(https://www.definit.co.uk/2018/07/monitoring-temperature-and-humidity-with-a-raspberry-pi-3-dht22-sensor-influxdb-and-grafana/)
 #It helped me a lot setting this sensor up
 
+# To enable the program on startup I used sudo nano /etc/rc.local to open rc.local and modified it by adding a line python /home/pi/energy.py &
+# Modifying rc.local will ensure that the program runs on start up 
+
 import time
 import sys
 import datetime
