@@ -1,0 +1,17 @@
+.appliances {
+    float: left;
+    width: calc(100% - 215px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 20px;
+}
+
+.appliances-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+}

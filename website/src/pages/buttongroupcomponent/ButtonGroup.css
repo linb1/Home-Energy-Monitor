@@ -1,0 +1,24 @@
+.customButton {
+    width: 75px;
+    height: 38px;
+    letter-spacing: 0.5px;
+    background-color: #56805a;
+    color: white;
+    font-size: 15px;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.button-group .active {
+    background-color: rgb(25, 26, 24);
+}
+
+.customButton:hover {
+    background-color: rgb(25, 26, 24);
+}
+
+.button-group {
+    display: flex;
+}

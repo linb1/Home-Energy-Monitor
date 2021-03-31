@@ -10,23 +10,23 @@ export const NavBarData = [
         icon: <AiIcons.AiFillHome />
     },
     {
-        title: 'Electricity',
-        path: '/electricity',
+        title: 'Appliances',
+        path: '/appliances',
         icon: <AiIcons.AiFillThunderbolt />
     },
     {
-        title: 'Statistics',
-        path: '/statistics',
+        title: 'Rooms',
+        path: '/rooms',
         icon: <Io5Icons.IoStatsChart />
     },
     {
-        title: 'Solar',
-        path: '/solar',
+        title: 'Costs',
+        path: '/costs',
         icon: <Io5Icons.IoSunny />
     },
     {
-        title: 'Fill 2',
-        path: '/fill_2',
+        title: 'Notifications',
+        path: '/notifications',
         icon: <GiIcons.GiGearHammer />
     }
 ];

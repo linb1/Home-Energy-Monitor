@@ -1,0 +1,8 @@
+.select-wrapper .select {
+    width: 200px;
+}
+
+.select-wrapper .label {
+    color: white;
+    margin-right: 10px;
+}
