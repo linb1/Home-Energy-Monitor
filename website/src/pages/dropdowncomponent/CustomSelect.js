@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
-import Select from 'react-select'
-import './CustomSelect.css'
+import React, { Component } from 'react';
+import Select from 'react-select';
+import './CustomSelect.css';
 
 class CustomSelect extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     sendValue = (value) => {
         this.props.sendData(value.value);

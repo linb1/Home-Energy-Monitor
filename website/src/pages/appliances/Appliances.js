@@ -38,7 +38,6 @@ class Appliances extends Component {
     render(){
         let timeandapp = this.state.appliancevalue+this.state.timevalue;
 
-
         return (
             <div className='appliances'>
                 <div className='appliances-controls'>
