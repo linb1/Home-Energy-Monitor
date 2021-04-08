@@ -1,0 +1,45 @@
+.rooms {
+    float: left;
+    width: calc(100% - 215px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 75px 20px;
+}
+
+.rooms-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.readings {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.readings-wrapper {
+    height: 90%;
+    width: 30%;
+    border: solid;
+    border-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+.readings-text {
+    font-size: 72px;
+}
+

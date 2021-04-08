@@ -17,16 +17,16 @@ export const NavBarData = [
     {
         title: 'Rooms',
         path: '/rooms',
-        icon: <Io5Icons.IoStatsChart />
+        icon: <GiIcons.GiDoor />
     },
     {
         title: 'Costs',
         path: '/costs',
-        icon: <Io5Icons.IoSunny />
+        icon: <AiIcons.AiOutlineDollarCircle />
     },
     {
         title: 'Notifications',
         path: '/notifications',
-        icon: <GiIcons.GiGearHammer />
+        icon: <AiIcons.AiOutlineBell />
     }
 ];

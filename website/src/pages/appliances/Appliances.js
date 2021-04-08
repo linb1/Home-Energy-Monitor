@@ -8,7 +8,7 @@ class Appliances extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appliancevalue: 'refrigerator',
+            appliancevalue: 'laptop',
             timevalue: 'hour'
         }
     }
@@ -24,14 +24,32 @@ class Appliances extends Component {
 
     renderSwitchGrafana(timeandapp) {
         switch(timeandapp) {
-            case 'refrigeratorhour':
-                return <iframe src="http://localhost:8989/d-solo/TajguHyMk/python-generated-data-5-minutes?orgId=1&refresh=5s&panelId=4" width="700" height="400" frameborder="0"></iframe>;
-            case 'refrigeratorday':
-                return <iframe src="http://localhost:8989/d-solo/o76zFDsMk/python-generated-data-15-minutes?orgId=1&refresh=5s&panelId=2" width="700" height="400" frameborder="0"></iframe>;
-            case 'refrigeratorweek':
-                return <iframe src="http://localhost:8989/d-solo/ofXpKDsGk/python-generated-data-30-minutes?orgId=1&refresh=5s&panelId=2" width="700" height="400" frameborder="0"></iframe>;
+            case 'laptophour':
+                return <iframe src="http://localhost:8989/d-solo/r3TMSO_Gk/hour?orgId=1&refresh=5s&panelId=4" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptopday':
+                return <iframe src="http://localhost:8989/d-solo/e6XqSdlGk/day?orgId=1&refresh=5s&panelId=2" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptopweek':
+                return <iframe src="http://localhost:8989/d-solo/bVhWNd_Mk/week?orgId=1&refresh=5s&panelId=2" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptopmonth':
+                return <iframe src="http://localhost:8989/d-solo/T1XNNdlMz/month?orgId=1&refresh=5s&panelId=2" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptoptwohour':
+                return <iframe src="http://localhost:8989/d-solo/r3TMSO_Gk/hour?orgId=1&refresh=5s&panelId=8" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptoptwoday':
+                return <iframe src="http://localhost:8989/d-solo/e6XqSdlGk/day?orgId=1&refresh=5s&panelId=6" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptoptwoweek':
+                return <iframe src="http://localhost:8989/d-solo/bVhWNd_Mk/week?orgId=1&refresh=5s&panelId=6" width="1000" height="600" frameborder="1"></iframe>;
+            case 'laptoptwomonth':
+                return <iframe src="http://localhost:8989/d-solo/T1XNNdlMz/month?orgId=1&refresh=5s&panelId=6" width="1000" height="600" frameborder="1"></iframe>;
+            case 'heaterhour':
+                return <iframe src="http://localhost:8989/d-solo/r3TMSO_Gk/hour?orgId=1&refresh=5s&panelId=6" width="1000" height="600" frameborder="1"></iframe>;
+            case 'heaterday':
+                return <iframe src="http://localhost:8989/d-solo/e6XqSdlGk/day?orgId=1&refresh=5s&panelId=4" width="1000" height="600" frameborder="1"></iframe>;
+            case 'heaterweek':
+                return <iframe src="http://localhost:8989/d-solo/bVhWNd_Mk/week?orgId=1&refresh=5s&panelId=4" width="1000" height="600" frameborder="1"></iframe>;
+            case 'heatermonth':
+                return <iframe src="http://localhost:8989/d-solo/T1XNNdlMz/month?orgId=1&refresh=5s&panelId=4" width="1000" height="600" frameborder="1"></iframe>;
             default:
-                return <iframe src="http://localhost:8989/d-solo/TajguHyMk/python-generated-data-5-minutes?orgId=1&refresh=5s&panelId=4" width="700" height="400" frameborder="0"></iframe>;
+                return <iframe src="http://localhost:8989/d-solo/r3TMSO_Gk/hour?orgId=1&refresh=5s&panelId=4" width="1000" height="600" frameborder="1"></iframe>;
         }
     }
 

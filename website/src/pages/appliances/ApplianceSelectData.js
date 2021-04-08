@@ -2,13 +2,13 @@ import React from 'react'
 
 export const ApplianceSelectData = [
     { 
-        value: 'refrigerator', 
-        label: 'Refrigerator' 
+        value: 'laptop', 
+        label: 'Laptop' 
     },
 
     { 
-        value: 'laptop', 
-        label: 'Laptop' 
+        value: 'laptoptwo', 
+        label: 'Laptop Two' 
     },
 
     { 

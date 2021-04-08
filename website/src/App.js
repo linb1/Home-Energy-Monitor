@@ -1,11 +1,11 @@
 import './App.css';
 import NavBar from './navbarcomponents/NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 import Appliances from './pages/appliances/Appliances';
-import Rooms from './pages/Rooms';
-import Costs from './pages/Costs';
-import Notifications from './pages/Notifications'
+import Rooms from './pages/rooms/Rooms';
+import Costs from './pages/costs/Costs';
+import Notifications from './pages/notifications/Notifications'
 
 function App() {
   return (
