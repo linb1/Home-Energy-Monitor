@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Notifications.css'
-import {alerts_costs} from '../costs/CostsInfluxQuery';
-import {alerts_rooms} from '../rooms/RoomInfluxQuery';
+import {alerts_appliance, alerts_rooms} from './NotificationsInfluxQuery';
+
 import ReactDOM from 'react-dom';
 
   
@@ -106,11 +106,11 @@ import ReactDOM from 'react-dom';
           //console.log('inside work' + alerts.length);
           const list = [...this.state.list];
 
-          for (var i = 0; i < alerts_costs.length; i++ ) {
+          for (var i = 0; i < alerts_appliance.length; i++ ) {
               
             const newItem = {
               id: 1 + Math.random(),
-              value: alerts_costs[i],
+              value: alerts_appliance[i],
             };
 
               //console.log('in alert' + alerts.[i]);

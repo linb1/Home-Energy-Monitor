@@ -1,8 +1,6 @@
-import axios from 'axios';
 import { query } from 'influx-api';
 
 const influx_url = 'http://10.0.0.61:8086';
-const eia_url = 'http://api.eia.gov/series/?api_key=f9cade4e03536c5e212cc61313cfb4ac&series_id=ELEC.PRICE.MA-ALL.A';
 var currenttemperature, currenthumidity;
 
 var currentdate = new Date();
@@ -10,7 +8,6 @@ var monthago = new Date(new Date().getTime() - (30 * 24 * 60 * 60 * 1000));
 var weekago = new Date(new Date().getTime() - (7 * 24 * 60 * 60 * 1000));
 var dayago = new Date(new Date().getTime() - (24 * 60 * 60 * 1000));
 var hourago = new Date(new Date().getTime() - (60 * 60 * 1000));
-var alerts_rooms = [];
 
 
 const now = currentdate.getUTCFullYear() + "-"
@@ -48,17 +45,6 @@ const lasthr = hourago.getUTCFullYear() + "-"
     + hourago.getUTCMinutes() + ":"
     + hourago.getUTCSeconds() + "Z";
 
-
-export const getData_eia = async () => {
-    try {
-        const data = await axios.get(eia_url);
-        return data.data.series[0].data[0][1];
-    } catch (error) {
-        return error;
-    }
-}
-
-
 export const getTempData_influx = async (database) => {
     var temprequest = 'SELECT temperature FROM "rpi-dht22" GROUP BY * ORDER BY DESC LIMIT 1'
     console.log(temprequest)
@@ -68,13 +54,8 @@ export const getTempData_influx = async (database) => {
             q: temprequest,
             db: database
         });
-        if(result.data.results[0].series[0].values[0][1]==0)
-        {
-            alerts_rooms.push( 'Humidity Sensor does not seem to be running');
-        }
         return result.data.results[0].series[0].values[0][1];
     } catch (error) {
-        alerts_rooms.push( 'Humidity Sensor does not seem to be connected');
         return 'NA';
     }
 }
@@ -88,13 +69,9 @@ export const getHumidData_influx = async (database) => {
             q: humidrequest,
             db: database
         });
-        if(result.data.results[0].series[0].values[0][1]==0)
-        {
-            alerts_rooms.push( 'Temperature Sensor does not seem to be running');
-        }
+        
         return result.data.results[0].series[0].values[0][1];
     } catch (error) {
-        alerts_rooms.push( 'Temperature Sensor does not seem to be connected');
         return 'NA';
     }
 }
@@ -106,7 +83,7 @@ async function logData() {
     currenthumidity = gotData_humid;
 }
 
-export { currenthumidity, currenttemperature, alerts_rooms };
+export { currenthumidity, currenttemperature };
 
 
 // DB_value = await logData();

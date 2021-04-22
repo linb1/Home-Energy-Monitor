@@ -5,13 +5,12 @@ import { query } from 'influx-api';
 const influx_url = 'http://10.0.0.61:8086';
 const eia_url = 'http://api.eia.gov/series/?api_key=f9cade4e03536c5e212cc61313cfb4ac&series_id=ELEC.PRICE.MA-ALL.A';
 var DB_valueHR , DB_valueDAY , DB_valueWEEK , DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH, rate;
-var alerts_costs = [];
 
 var currentdate = new Date();
 var monthago = new Date(new Date().getTime() - (30 * 24 * 60 * 60 * 1000));
 var weekago = new Date(new Date().getTime() - (7 * 24 * 60 * 60 * 1000));
 var dayago = new Date(new Date().getTime() - (24 * 60 * 60 * 1000));
-var hourago = new Date(new Date().getTime() - (60 * 60 * 1000));
+var hourago = new Date(new Date().getTime() - (60 * 1000));
 
 
 const now = currentdate.getUTCFullYear() + "-"
@@ -100,13 +99,9 @@ export const getData_influx = async (qtype, field, measurement, length, source, 
             q: request,
             db: database
         });
-        if(result.data.results[0].series[0].values[0][1]==0)
-        {
-            alerts_costs.push( name + " does not seem to be running after running " + qtype + ' query for ' + length);
-        }
         return result.data.results[0].series[0].values[0][1];
-    } catch (error) {
-        alerts_costs.push( name + " does not seem to be connected after running " + qtype + ' query for ' + length);
+    } 
+    catch (error) {
         return 'NA';
     }
 }
@@ -133,7 +128,7 @@ async function logData_eia() {
     rate = gotData;
 }
 
-export { DB_valueHR, DB_valueDAY, DB_valueWEEK, DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH, alerts_costs};
+export { DB_valueHR, DB_valueDAY, DB_valueWEEK, DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH};
 
 
 // DB_value = await logData();

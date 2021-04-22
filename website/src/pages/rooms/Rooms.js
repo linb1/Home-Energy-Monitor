@@ -64,7 +64,7 @@ class Rooms extends Component {
                         <div className='readings-text'>
                         {temperature}
                         </div>
-                        °F in {this.state.roomName}
+                        °C in {this.state.roomName}
                     </div>
 
                     <div className='readings-wrapper'>
