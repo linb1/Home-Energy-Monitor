@@ -15,13 +15,15 @@ main{
 }
 
 .search-box{
-    width:100%;
-    margin: 0 0 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px 15px;
 }
 
 .search-box .search-bar{
     display: block;
-    width: 100%;
+    width: 50%;
     padding: 15px;
 
     appearance: none;
