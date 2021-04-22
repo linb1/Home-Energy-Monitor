@@ -5,12 +5,13 @@ import Home from './pages/home/Home';
 import Appliances from './pages/appliances/Appliances';
 import Rooms from './pages/rooms/Rooms';
 import Costs from './pages/costs/Costs';
-import Notifications from './pages/notifications/Notifications'
+import Notifications from './pages/notifications/Notifications';
+import Weather from './pages/weather/Weather';
 
 function App() {
   return (
     <div className="App">
-      <Router>  
+      <Router>
         <NavBar />
         <Switch>
           <Route path='/' exact component={Home} />
@@ -18,6 +19,7 @@ function App() {
           <Route path='/rooms' component={Rooms} />
           <Route path='/costs' component={Costs} />
           <Route path='/notifications' component={Notifications} />
+          <Route path='/weather' component={Weather} />
         </Switch>
       </Router>
     </div>

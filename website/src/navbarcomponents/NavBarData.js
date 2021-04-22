@@ -28,5 +28,10 @@ export const NavBarData = [
         title: 'Notifications',
         path: '/notifications',
         icon: <AiIcons.AiOutlineBell />
+    },
+    {
+        title: 'Weather',
+        path: '/weather',
+        icon: <Io5Icons.IoPartlySunnyOutline />
     }
 ];
