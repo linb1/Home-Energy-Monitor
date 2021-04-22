@@ -1,11 +1,11 @@
 .rooms {
     float: left;
     width: calc(100% - 215px);
-    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 75px 20px;
+    margin-left: 175px;
 }
 
 .rooms-controls {
