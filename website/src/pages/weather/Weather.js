@@ -11,6 +11,14 @@ function Weather() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
 
+    fetch(`${api.base}weather?q=Boston&units=imperial&APPID=${api.key}`)
+        .then(res => res.json())
+        .then(result => {
+            setWeather(result);
+            setQuery('');
+            console.log(result);
+        });
+
     const search = evt => {
         if (evt.key == "Enter") {
             fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
@@ -38,16 +46,7 @@ function Weather() {
     return (
         <div className="app">
             <main>
-                <div className="search-box">
-                    <input
-                        type="text"
-                        className="search-bar"
-                        placeholder="Search..."
-                        onChange={e => setQuery(e.target.value)}
-                        value={query}
-                        onKeyPress={search}
-                    />
-                </div>
+
                 {(typeof weather.main != "undefined") ? (
                     <div>
                         <div className="location-box">
