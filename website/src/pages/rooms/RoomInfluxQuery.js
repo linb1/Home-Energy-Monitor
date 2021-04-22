@@ -1,8 +1,6 @@
-import axios from 'axios';
 import { query } from 'influx-api';
 
 const influx_url = 'http://10.0.0.61:8086';
-const eia_url = 'http://api.eia.gov/series/?api_key=f9cade4e03536c5e212cc61313cfb4ac&series_id=ELEC.PRICE.MA-ALL.A';
 var currenttemperature, currenthumidity;
 
 var currentdate = new Date();
@@ -47,17 +45,6 @@ const lasthr = hourago.getUTCFullYear() + "-"
     + hourago.getUTCMinutes() + ":"
     + hourago.getUTCSeconds() + "Z";
 
-
-export const getData_eia = async () => {
-    try {
-        const data = await axios.get(eia_url);
-        return data.data.series[0].data[0][1];
-    } catch (error) {
-        return error;
-    }
-}
-
-
 export const getTempData_influx = async (database) => {
     var temprequest = 'SELECT temperature FROM "rpi-dht22" GROUP BY * ORDER BY DESC LIMIT 1'
     console.log(temprequest)
@@ -82,6 +69,7 @@ export const getHumidData_influx = async (database) => {
             q: humidrequest,
             db: database
         });
+        
         return result.data.results[0].series[0].values[0][1];
     } catch (error) {
         return 'NA';
