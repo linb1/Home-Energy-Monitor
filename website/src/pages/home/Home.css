@@ -1,23 +1,40 @@
 .home {
-    float: left;
-    width: calc(100% - 215px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 100px 20px;
+  float: left;
+  width: calc(100% - 215px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 175px;
+  padding: 20px 20px;
 }
 
-.row {
-    width: 100%;
-    height: 40%;
-    background-color: white;
+.row-grafana,
+.row-hgraph {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.canvasjs-chart-toolbar,
+.canvasjs-chart-tooltip,
+.canvasjs-chart-toolbar,
+.canvasjs-chart-credit {
+  display: none;
 }
 
 .box {
-    background-color:#6600cc;
-    height: 100%;
-    width: 40%;
-    font-size: 30px;
-    color: white;
+  background-color: #6600cc;
+  height: 100%;
+  width: 40%;
+  font-size: 30px;
+  color: white;
+}
+
+.row-welcome {
+  text-align: left;
+  align-items: left;
+  color: white;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

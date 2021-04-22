@@ -3,11 +3,10 @@
     width: 175px;
     background-color: #141619;
     float: left;
-    display: fixed;
+    position: fixed;
 }
 
 .navbar .navbar-list {
-    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
