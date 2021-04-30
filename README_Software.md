@@ -99,6 +99,8 @@ A Grafana server connects to the database using it’s server URL and allows the
 # InfluxDB
 Multiple Influx databases store all information received from the sensors and organize the data accordingly with the use of measurements, key-fields, and tag-sets.
 
+![Image](./images/flowchart.jpg)
+
 # Dev/buildtool information:
 React 17.0.1 with axios 0.21.1, follow-redirects 1.13.3, bootstrap 4.6.0, and influx-api 0.1.4. Influxdb-1.8.4 with Grafana 7.4.5 and Python 3.8.
 
