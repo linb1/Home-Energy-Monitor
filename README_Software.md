@@ -7,7 +7,7 @@ Here you will find the majority of code for our website.
 ## home folder
 Code for the "Home" tab of our website.
 ### Home.js
-The meters are displayed using embedded grafana links. The meter values are adjusted depending on stored data values. For example, if 90-100 is red, it means values between 90-100 are at the high end of stored values. CanvasJS is used to graph the yearly retail electrcity rate for MA and yearly carbon dioxide emissions for MA. Data for this is obtained using api calls to the EIA or the U.S. Energy Information Administration. The total residential retail electrcity for Massachusetts for the current year is also shown and then the amoount of time BU can be powered using that is calculated using data provided on the BU website.
+The meters are displayed using embedded grafana links. The meter values are adjusted depending on stored data values. For example, if 90-100 is red, it means values between 90-100 are at the high end of stored values. CanvasJS is used to graph the yearly retail electricity rate for MA and yearly carbon dioxide emissions for MA. Data for this is obtained using api calls to the EIA or the U.S. Energy Information Administration. The total residential retail electricity for Massachusetts for the current year is also shown and then the amount of time BU can be powered using that is calculated using data provided on the BU website.
 ### HomeQuery.js
 API calls are queried here and then data values are exported to "Home.js". The axios module is used to make the API calls and asynchronous functions are used to make sure the API calls are complete before variables are given values.
 ### Home.css & HomeStyle.js
@@ -16,7 +16,7 @@ Styling for the "Home" tab.
 ## appliances folder
 Code for the "Appliances" tab of our website.
 ### Appliances.js
-The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different timeframes when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
+The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different time frames when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
 are clicked. A dropdown menu imported from '../dropdowncomponent/CustomSelect' allows for switching between the different appliances.
 ### ApplianceSelectData.js
 This is where the values and labels for the different selectable appliances are stored.
@@ -26,7 +26,7 @@ Styling for the "Appliance" tab.
 ## rooms folder
 Code for the "Rooms" tab of our website.
 ### Rooms.js
-The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different timeframes when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
+The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different time frames when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
 are clicked. A dropdown menu imported from '../dropdowncomponent/CustomSelect' allows for switching between the different rooms. The most recent humidity and temperature values from our Influx database is displayed.
 ### RoomsSelectData.js
 This is where the values and labels for the different selectable rooms are stored.
@@ -55,7 +55,7 @@ This is where the values and labels for the different drop down menu states are 
 ## costs folder
 Code for the "Costs" tab of our website.
 ### Costs.js
-Costs for energy usage in the past hour/dat/week/month are displayed. These values are calculated based on values obtained using queries to our Influx Database and API calls to the U.S. Energy Information Administration.
+Costs for energy usage in the past hour/day/week/month are displayed. These values are calculated based on values obtained using queries to our Influx Database and API calls to the U.S. Energy Information Administration.
 ### CostsInfluxQuery.js
 We use the influx-api module to make queries to our Influx database. Using these queries, we get the value of the sum of electricity used in the past hour/day/week/month. We use axios to make an api call to the U.S. Energy Information Administration to get the current average retail residential electricity rate for Massachusetts. We then use these values to estimate the cost. The dates that we need are calculated using the Date() function.
 ### Costs.css
