@@ -10,12 +10,13 @@ import datetime
 import Adafruit_DHT
 from influxdb import InfluxDBClient
 
-host = "169.254.244.215" # host ip address
+time.sleep(35)
+host = "10.0.0.61" # host ip address
 port = 8086 # default port
 user = "pepe1" # the user/password created for the pi
 password = "kek" 
 dbname = "sensor_data" # created database
-interval = 3 # Sample period in seconds
+interval = 15 # Sample period in seconds
 
 client = InfluxDBClient(host, port, user, password, dbname)
 
