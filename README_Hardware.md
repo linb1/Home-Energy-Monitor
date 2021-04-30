@@ -26,7 +26,7 @@ The process is very intuitive, but will require a few steps before running effic
 
 We highly suggest you do not cover the physical installation of the CTs to your electrical circuits. It should only be done by an electrician or someone comfortable enough with electrical wiring.
 
-![IotaWatt](https://th.bing.com/th/id/R6b268a9d634aedfdb6a42d9c83927367?rik=iMThwXAZNp8IxQ&pid=ImgRaw =200x)
+<img src="https://th.bing.com/th/id/R6b268a9d634aedfdb6a42d9c83927367?rik=iMThwXAZNp8IxQ&pid=ImgRaw" width="200">
 
 1 - Connect the USB power supply to the 5V DC USB port.
 
