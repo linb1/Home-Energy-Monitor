@@ -22,7 +22,7 @@ interval = 15 # Sample period in seconds
 client = InfluxDBClient(host, port, user, password, dbname)
 
 
-manager = VeSync("alikat@bu.edu","12345678")
+manager = VeSync("email","password")
 manager.login()
 
 # Get/Update Devices from server - populate device lists
