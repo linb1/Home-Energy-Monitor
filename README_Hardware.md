@@ -22,6 +22,8 @@ At the end, you should be able to see that it's on and you should be able to use
 
 ## Setting up the IoTaWatt
 
+Vendor Information: You can buy it from IoTaWatt itself [here](https://iotawatt.com/).
+
 The process is very intuitive, but will require a few steps before running efficently. For some background, the IoTaWatt has 15 input channels. One is reserved for measuring voltage, USB power supply, and AC voltage reference transformer.The rest of the input channels are for current transformers. You will need to have a 2.4 GHz wireless network. 
 
 We highly suggest you do not cover the physical installation of the CTs to your electrical circuits. It should only be done by an electrician or someone comfortable enough with electrical wiring.
@@ -38,38 +40,41 @@ We highly suggest you do not cover the physical installation of the CTs to your 
 
 5 - Connect to the ESP8266's WiFi to start get into the default page of the IoTaWatt. You will then have the option to "Configure WiFi". You will have the option to choose a network that was scanned, or if your network is hidden, you will be able to enter the necessary info in. After, the light on the IoTaWatt should turn green.
 
-![Screenshot](https://docs.iotawatt.com/en/02_05_12/_images/CaptivePortal.jpg =200x)
 
-![Wificonfig](https://docs.iotawatt.com/en/02_05_12/_images/SSIDpwd.jpg =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/CaptivePortal.jpg" width="200">
+
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/SSIDpwd.jpg" width="200">
 
 6 - With any device connected to the SAME network as the IoTaWatt, go to http://iotawatt.local. You will then see four options; Setup, Tools, Status, and Graphs. When clicking setup, you will be allowed to change the device name, but note that your IoTaWatt configuration website becomes http://devicename.local. 
 
-![IotaWattinterface](https://docs.iotawatt.com/en/02_05_12/_images/mainMenu.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/mainMenu.png" width="200">
 
 7 - The AC line frequency is vital to ensuring accurate measurements. Remember that one of the ports has a 9V AC Ref, so in the inputs tab under setup, you will see that port 0 has an input active. Make sure that the model of your voltage transformer is current (there are a lot of options). 
 
-![InitialSetup](https://docs.iotawatt.com/en/02_05_12/_images/VTinputList.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/VTinputList.png" width="200">
 
 8 - Here is where the magic of the IoTaWatt comes in. To set up a current transformer, go to inputs again and you can add by clicking the channel number button. You can edit this current transformer to a great degree. You can edit the name to be something more readable (ex. Stove, Washer/Dryer). Make sure to choose the right model for your CT.
 
-![MenuOption](https://docs.iotawatt.com/en/02_05_12/_images/setupInputs.png =200x)
-![CTConfig](https://docs.iotawatt.com/en/02_05_12/_images/configGenericInput.png =200x)
+
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/setupInputs.png" width="200">
+
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/configGenericInput.png" width="200">
 
 9 - There is an option to allow negative power values, doubling to monitor 240V circuits, or reversing circuits (when the CT is installed backwards).
 
 10 - The other end of the IoTaWatt is the outputs. You can create up to any number of outputs as long as they are uniquely named. When adding an output, you will be asked to enter a name, unit measured, and a calculator will appear below. The calculator will be like your typical calculator but there is a button for inputs, which you can select to be a variable in your output equation.
 (ex. total_power = dryer_power + heat_pump_power).
 
-![Calculator](https://docs.iotawatt.com/en/02_05_12/_images/newOutput.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/newOutput.png" width="200">
 
 11 - You can see all of the inputs and outputs in the Status tab, then under Inputs/Outputs Status. Finally, we chose influxDB because of its fast computing power for time-series data. To configure, hover over Setup tab and click Web Server from the dropdown.
 
-![IO](https://docs.iotawatt.com/en/02_05_12/_images/inputsOutputsDisplay.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/inputsOutputsDisplay.png" width="200">
 
 12 - Choose InfluxDB. You will see a lot of options appear but we will take you through it. Post interval is how long each data point represents (5 seconds to 3600 seconds). Bulk send is how often the IoTaWatt will send the data; for our project, we chose to do every 15 seconds so balance the update frequency. The server URL of the influxDB server will always have to start with http://. Since we have our project on a local instance, our server URL was http://raspberrypiIP:8086.
 
-![InfluxDBIota](https://docs.iotawatt.com/en/02_05_12/_images/addInflux.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/addInflux.png" width="200">
 
 13 - This step is optional. InfluxDB does not use fields such as regular SQL databases but tag-key/tag-value pairs. You can change the measurement name but the default will be the output name. Tags help increase the performance of data retrieval easier. 
 
-![tagpairs](https://docs.iotawatt.com/en/02_05_12/_images/addTagSet.png =200x)
+<img src="https://docs.iotawatt.com/en/02_05_12/_images/addTagSet.png" width="200">
