@@ -94,7 +94,7 @@ class Home extends Component {
             <div className='home'>
                 <div className='row-welcome'>
                 <h1 className='welcome-text'>
-                    Welcome Professor
+                    Welcome, Professor
                 </h1>
                 </div>
 
@@ -109,24 +109,24 @@ class Home extends Component {
                         <CanvasJSChart options={chart2}/>
                 </div>
                 
-                {/* <div className='row'>
+                 <div className='row-box'>
                     <div className='box'>
                         <img src={lightning} style={symbol} className="greener-living-logo" alt="lightning" />
                         <text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        For the year
+                        For the year 
                        <br />
                         </text>
                         <text style={big}>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         {year - 1}<br />
                         </text>
                         <text> <br />
-                        The total residential retail electricity for Massachusetts was {total} million kWh <br /><br />
+                            The total residential retail electricity for Massachusetts was {total} million kWh <br /><br />
 
-                        That's enough to power BU for {((total * 1000000) / BU_usage).toFixed(2)} school years!
+                            That's enough to power BU for {((total * 1000000) / BU_usage).toFixed(2)} school years!
                     </text>
                     </div>
-                </div> */}
+                </div> 
 
             </div>
 
