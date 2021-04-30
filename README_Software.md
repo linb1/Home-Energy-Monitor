@@ -1,12 +1,12 @@
 Software Report
 Team Greener Living
 
-# pages folder
+# Pages folder
 Here you will find the majority of code for our website.
 
 ## home folder
 Code for the "Home" tab of our website.
-## #Home.js
+### Home.js
 The meters are displayed using embedded grafana links. The meter values are adjusted depending on stored data values. For example, if 90-100 is red, it means values between 90-100 are at the high end of stored values. CanvasJS is used to graph the yearly retail electrcity rate for MA and yearly carbon dioxide emissions for MA. Data for this is obtained using api calls to the EIA or the U.S. Energy Information Administration. The total residential retail electrcity for Massachusetts for the current year is also shown and then the amoount of time BU can be powered using that is calculated using data provided on the BU website.
 ### HomeQuery.js
 API calls are queried here and then data values are exported to "Home.js". The axios module is used to make the API calls and asynchronous functions are used to make sure the API calls are complete before variables are given values.
