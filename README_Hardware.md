@@ -20,7 +20,7 @@ Again setting this up is very simple:
 
 At the end, you should be able to see that it's on and you should be able to use the app to turn the plug's night light on and off. If that works, then you are set. The software will take care of everything else but you need to enter the information of the account you created into the data collection script (**check out README_Software.md for more information about this**).
 
-##Setting up the IoTaWatt
+## Setting up the IoTaWatt
 
 The process is very intuitive, but will require a few steps before running efficently. For some background, the IoTaWatt has 15 input channels. One is reserved for measuring voltage, USB power supply, and AC voltage reference transformer.The rest of the input channels are for current transformers. You will need to have a 2.4 GHz wireless network. 
 
