@@ -1,0 +1,16 @@
+# The service that is implemented to run the startup code
+# Credit to this github thread for the help: https://raspberrypi.stackexchange.com/questions/78991/running-a-script-after-an-internet-connection-is-established/79033
+
+[Unit]
+Description= Energy Plug Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/launchplug.sh
+
+[Install]
+WantedBy=multi-user.target
