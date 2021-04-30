@@ -1,96 +1,96 @@
 Software Report
 Team Greener Living
 
-#pages folder
+# pages folder
 Here you will find the majority of code for our website.
 
-##home folder
+## home folder
 Code for the "Home" tab of our website.
-###Home.js
+## #Home.js
 The meters are displayed using embedded grafana links. The meter values are adjusted depending on stored data values. For example, if 90-100 is red, it means values between 90-100 are at the high end of stored values. CanvasJS is used to graph the yearly retail electrcity rate for MA and yearly carbon dioxide emissions for MA. Data for this is obtained using api calls to the EIA or the U.S. Energy Information Administration. The total residential retail electrcity for Massachusetts for the current year is also shown and then the amoount of time BU can be powered using that is calculated using data provided on the BU website.
-###HomeQuery.js
+### HomeQuery.js
 API calls are queried here and then data values are exported to "Home.js". The axios module is used to make the API calls and asynchronous functions are used to make sure the API calls are complete before variables are given values.
-###Home.css & HomeStyle.js
+### Home.css & HomeStyle.js
 Styling for the "Home" tab.
 
-##appliances folder
+## appliances folder
 Code for the "Appliances" tab of our website.
-###Appliances.js
+### Appliances.js
 The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different timeframes when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
 are clicked. A dropdown menu imported from '../dropdowncomponent/CustomSelect' allows for switching between the different appliances.
-###ApplianceSelectData.js
+### ApplianceSelectData.js
 This is where the values and labels for the different selectable appliances are stored.
-###Appliances.css
+### Appliances.css
 Styling for the "Appliance" tab.
 
-##rooms folder
+## rooms folder
 Code for the "Rooms" tab of our website.
-###Rooms.js
+### Rooms.js
 The graphs are displayed using embedded grafana links. A switch statement is used to switch between the different timeframes when the different buttons imported from '../buttongroupcomponent/ButtonGroup'
 are clicked. A dropdown menu imported from '../dropdowncomponent/CustomSelect' allows for switching between the different rooms. The most recent humidity and temperature values from our Influx database is displayed.
-###RoomsSelectData.js
+### RoomsSelectData.js
 This is where the values and labels for the different selectable rooms are stored.
-###RoomInfluxQuery.js
+### RoomInfluxQuery.js
 We use the influx-api module to make queries to our Influx database. The latest value in our database is obtained using the query 'SELECT temperature FROM "rpi-dht22" GROUP BY * ORDER BY DESC LIMIT 1' or 'SELECT humidity FROM "rpi-dht22" GROUP BY * ORDER BY DESC LIMIT 1'.  The dates that we need are calculated using the Date() function.
-###Rooms.css
+### Rooms.css
 Styling for the "Rooms" tab.
 
-##buttongroupcomponent folder
+## buttongroupcomponent folder
 Code for our button component.
-###ButtonGroup.js
+### ButtonGroup.js
 Logic for button component.
-###ButtonGroupData.js
+### ButtonGroupData.js
 This is where the values and labels for the different button states are stored.
-###ButtonGroup.css
+### ButtonGroup.css
 Styling for the buttons used in the appliances and rooms tabs.
 
 
-##dropdowncomponent folder
+## dropdowncomponent folder
 Code for our drop down menu component
-###CustomSelect.js
+### CustomSelect.js
 Logic for drop down menu component.
-###CustomSelect.css
+### CustomSelect.css
 This is where the values and labels for the different drop down menu states are stored.
 
-##costs folder
+## costs folder
 Code for the "Costs" tab of our website.
-###Costs.js
+### Costs.js
 Costs for energy usage in the past hour/dat/week/month are displayed. These values are calculated based on values obtained using queries to our Influx Database and API calls to the U.S. Energy Information Administration.
-###CostsInfluxQuery.js
+### CostsInfluxQuery.js
 We use the influx-api module to make queries to our Influx database. Using these queries, we get the value of the sum of electricity used in the past hour/day/week/month. We use axios to make an api call to the U.S. Energy Information Administration to get the current average retail residential electricity rate for Massachusetts. We then use these values to estimate the cost. The dates that we need are calculated using the Date() function.
-###Costs.css
+### Costs.css
 Styling for the "Costs" tab.
 
 
-##notifications folder
+## notifications folder
 Code for the "Notifications" tab of our website.
-###Notifications.js
+### Notifications.js
 Users can click on the button to check for any detected issues. Issues are determined through queries to our database. These alerts stay even if the page is refreshed by using local storage and can be removed by clicking on the "x".
-###NotificationsInfluxQuery.js
+### NotificationsInfluxQuery.js
 We use the influx-api module to make queries to our Influx database. Using these queries, we check if connected devices are working or if there are extreme values. We check values in the database in the last minute and if the values are extremely low, we determine that the device is not working properly. We also use the query to check for standard deviation. If the values obtained are above 2 standard deviations from the average, we determine that it is an extreme value. The dates that we need are calculated using the Date() function.
-###Notifications.css
+### Notifications.css
 Styling for the "Notifications" tab.
 
 
 
-##weather folder
+## weather folder
 
-###Weather.js
-###Weather.css
+### Weather.js
+### Weather.css
 
-#navbarcomponents folder
+# navbarcomponents folder
 Code for our navigation bar component.
-##Navbar.js
+## Navbar.js
 Logic for our navigation bar component.
-##NavbarData.js
+## NavbarData.js
 All of our tabs are stored here.
-##Navbar.css
+## Navbar.css
 Styling for our navigation bar component.
 
-#assets folder
-##canvasjs.min.js & canvasjs.react.js
+# assets folder
+## canvasjs.min.js & canvasjs.react.js
 Files needed to support canvasjs in react.
-##images
+## images
 Images used throughout our website.
 
 Note: This guide assumes you have a raspberry pi setup and ready to work. There are many far better guides that would explain better than we could such as out there such as (**https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up**)
