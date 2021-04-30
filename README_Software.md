@@ -24,7 +24,7 @@ First, run this for each service:
 > sudo systemctl edit --force --full launchplug.service
 
 And edit the content to match launchtemp.service and launchplug.service in this repository.
-Finally, you need to start and enable services using this for each service:
+Finally, you need to start and enable the services using this for each service:
 
 > sudo systemctl enable launchtemp.service
 > 
