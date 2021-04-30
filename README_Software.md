@@ -98,7 +98,7 @@ A Grafana server connects to the database using it’s server URL and allows the
 
 # InfluxDB
 Multiple Influx databases store all information received from the sensors and organize the data accordingly with the use of measurements, key-fields, and tag-sets.
-
+#Software Flow chart
 ![Image](./images/flowchart.jpg)
 
 # Dev/buildtool information:
