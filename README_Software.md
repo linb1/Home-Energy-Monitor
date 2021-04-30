@@ -93,6 +93,9 @@ Files needed to support canvasjs in react.
 ## images
 Images used throughout our website.
 
+# Dev/buildtool information:
+React 17.0.1 with axios 0.21.1, follow-redirects 1.13.3, bootstrap 4.6.0, and influx-api 0.1.4. Influxdb-1.8.4 with Grafana 7.4.5 and Python 3.8.
+
 Note: This guide assumes you have a raspberry pi setup and ready to work. There are many far better guides that would explain better than we could such as out there such as (**https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up**)
 
 
