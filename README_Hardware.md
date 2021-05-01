@@ -1,11 +1,17 @@
 
+
+# Table of Contents
+
+
 ## Schematics and Pictures
 
 A rough schematic of the temperature and humidity sensor:
 ![Image](./images/tempschematic.png)
 
+
 A picture of what the temperature and humidity sensor looks like:
 ![Image](./images/sensor.png)
+
 
 A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 ![Image](./images/plugsandiota.png)
