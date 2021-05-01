@@ -48,7 +48,7 @@ Team Greener Living
 - [Adafruit_Python_DHT](#adafruit-python-dht)
 - [Software Flow chart](#software-flow-chart)
 - [Dev/buildtool information:](#dev-buildtool-information-)
-- [Installation Process For the Website](#installation-process-for-the-website)
+- [Installation Process For the Raspberry Pi](#installation-process-for-the-raspberry-pi)
 - [Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:](#installation-process-for-the-temperature-and-humidity-sensor--and-energy-plugs-)
 
 
@@ -164,9 +164,11 @@ This library allows the raspberry pi to collect the data being measured by the D
 # Dev/buildtool information
 React 17.0.1 with axios 0.21.1, follow-redirects 1.13.3, bootstrap 4.6.0, and influx-api 0.1.4. Influxdb-1.8.4 with Grafana 7.4.5 and Python 3.8.
 
-## Installation Process For the Website
+## Installation Process For the Raspberry Pi
 
-Note: This guide assumes you have a raspberry pi setup and ready to work. There are many far better guides that would explain better than we could such as out there such as (**https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up**)
+Follow this guide: **https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up** 
+
+It is far better than what I could briefly explain, or you could use the myriad of online guides out there. The rest of this guide assumes you have a raspberry pi setup and ready to work.
 
 
 ## Installation Process For the Temperature and Humidity Sensor, and Energy Plugs
