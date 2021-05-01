@@ -98,6 +98,13 @@ A Grafana server connects to the database using it’s server URL and allows the
 
 # InfluxDB
 Multiple Influx databases store all information received from the sensors and organize the data accordingly with the use of measurements, key-fields, and tag-sets.
+
+# Pyvesync_v2
+This library contains the functions that allow the raspberry pi to collect and store the energy being measured by the ESW15 energy plugs.
+
+# Adafruit_Python_DHT
+This library allows the raspberry pi to collect the data being measured by the DHT22 temperature and humidity sensor.
+
 # Software Flow chart
 ![Image](./images/flowchart.jpg)
 
