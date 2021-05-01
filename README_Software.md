@@ -128,9 +128,15 @@ Styling for the "Notifications" tab.
 
 
 ## weather folder
-
+Code for the "Weather" tab of our website.
 ### Weather.js
+Users can type in the search bar to view current time, temperature, and sky conditions for any major city they search for. The search bar utilizes query to the OpenWeatherMap API. Users can search any city with the format of [city] or [city, country initials]. We use the math.round() function to round the temperature to a whole number. The query gives all of the current, real-time, information that appears in the form of:
+City, country
+Day of week, day of month, month, and year
+Temperature in Fahrenheit
+Sky condition
 ### Weather.css
+Styling for the "Notifications" tab.
 
 # navbarcomponents folder
 Code for our navigation bar component.
