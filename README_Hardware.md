@@ -1,6 +1,7 @@
 # Table of Content
 
 - [Schematics and Pictures](#schematics-and-pictures)
+- [Bill of Materials](#bill-of-materials)
 - [Setting up the Temperature and Humidity Sensor:](#setting-up-the-temperature-and-humidity-sensor)
 - [Setting up the Etekcity ESW15 Energy plugs:](#setting-up-the-etekcity-esw15-energy-plugs)
 - [Setting up the IoTaWatt](#setting-up-the-iotawatt)
@@ -20,7 +21,7 @@ A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 
 ## Bill of Materials
 
-![Image](./images/bom.png)
+![Image](./images/bomo.png)
 
 ## Setting up the Temperature and Humidity Sensor
 This process is really simple:
