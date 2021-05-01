@@ -1,7 +1,9 @@
+# Table of Content
 
-
-# Table of Contents
-
+- [Schematics and Pictures](#schematics-and-pictures)
+- [Setting up the Temperature and Humidity Sensor:](#setting-up-the-temperature-and-humidity-sensor)
+- [Setting up the Etekcity ESW15 Energy plugs:](#setting-up-the-etekcity-esw15-energy-plugs)
+- [Setting up the IoTaWatt](#setting-up-the-iotawatt)
 
 ## Schematics and Pictures
 
@@ -16,7 +18,7 @@ A picture of what the temperature and humidity sensor looks like:
 A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 ![Image](./images/plugsandiota.png)
 
-## Setting up the Temperature and Humidity Sensor:
+## Setting up the Temperature and Humidity Sensor
 This process is really simple:
 
 You simply need a Raspberry Pi with pinouts, the DHT22 temperature and humidity sensor and female to female jumper wires.
@@ -25,7 +27,7 @@ Using the wires, connect the DHT22's (+) pin to the Pi's Pin 1, the DHT22's (out
 
 That's it! The software will do the rest of the work.
 
-## Setting up the Etekcity ESW15 Energy plugs:
+## Setting up the Etekcity ESW15 Energy plugs
 
 You need the plugs and a 2.4 GHz wifi connection. Then can be made using a WiFi hotspot using your phone or laptop.
 Again setting this up is very simple:
