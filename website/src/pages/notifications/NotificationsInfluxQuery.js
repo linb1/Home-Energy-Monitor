@@ -102,7 +102,13 @@ export const getData_dht = async (qtype, field, measurement, length, database) =
 
 async function logData() {
     var gotData_minute = await getData_influx('sum', 'Watts', 'iotawatt', 'minute', 'ct', 'laptop', 'iota');
+    var gotData_mean = await getData_influx('mean', 'Watts', 'iotawatt', 0 , 'ct', 'laptop', 'iota');
+    var gotData_STD = await getData_influx('STDDEV', 'Watts', 'iotawatt', 0 , 'ct', 'laptop', 'iota');
     var gotData_humidity = await getData_dht('mean', 'humidity', 'rpi-dht22', 'minute', 'sensing');
+    if(gotData_minute > (gotData_mean + (2*gotData_STD)))
+    {
+        alerts_appliance.push("Abnormal readings detected");
+    }
 
     iota_valueMIN = gotData_minute;
     humid_valueMIN = gotData_humidity;
