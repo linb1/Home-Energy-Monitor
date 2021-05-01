@@ -1,6 +1,61 @@
 Software Report
 Team Greener Living
 
+# Table of Contents
+- [Project Contents](#project-contents)
+- [Pages folder](#pages-folder)
+  * [home folder](#home-folder)
+    + [Home.js](#homejs)
+    + [HomeQuery.js](#homequeryjs)
+    + [Home.css & HomeStyle.js](#homecss---homestylejs)
+  * [appliances folder](#appliances-folder)
+    + [Appliances.js](#appliancesjs)
+    + [ApplianceSelectData.js](#applianceselectdatajs)
+    + [Appliances.css](#appliancescss)
+  * [rooms folder](#rooms-folder)
+    + [Rooms.js](#roomsjs)
+    + [RoomsSelectData.js](#roomsselectdatajs)
+    + [RoomInfluxQuery.js](#roominfluxqueryjs)
+    + [Rooms.css](#roomscss)
+  * [buttongroupcomponent folder](#buttongroupcomponent-folder)
+    + [ButtonGroup.js](#buttongroupjs)
+    + [ButtonGroupData.js](#buttongroupdatajs)
+    + [ButtonGroup.css](#buttongroupcss)
+  * [dropdowncomponent folder](#dropdowncomponent-folder)
+    + [CustomSelect.js](#customselectjs)
+    + [CustomSelect.css](#customselectcss)
+  * [costs folder](#costs-folder)
+    + [Costs.js](#costsjs)
+    + [CostsInfluxQuery.js](#costsinfluxqueryjs)
+    + [Costs.css](#costscss)
+  * [notifications folder](#notifications-folder)
+    + [Notifications.js](#notificationsjs)
+    + [NotificationsInfluxQuery.js](#notificationsinfluxqueryjs)
+    + [Notifications.css](#notificationscss)
+  * [weather folder](#weather-folder)
+    + [Weather.js](#weatherjs)
+    + [Weather.css](#weathercss)
+- [navbarcomponents folder](#navbarcomponents-folder)
+  * [Navbar.js](#navbarjs)
+  * [NavbarData.js](#navbardatajs)
+  * [Navbar.css](#navbarcss)
+- [assets folder](#assets-folder)
+  * [canvasjs.min.js & canvasjs.react.js](#canvasjsminjs---canvasjsreactjs)
+  * [images](#images)
+- [Grafana](#grafana)
+- [InfluxDB](#influxdb)
+- [Pyvesync_v2](#pyvesync-v2)
+- [Adafruit_Python_DHT](#adafruit-python-dht)
+- [Software Flow chart](#software-flow-chart)
+- [Dev/buildtool information:](#dev-buildtool-information-)
+  * [Installation Process For the Website](#installation-process-for-the-website)
+  * [Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:](#installation-process-for-the-temperature-and-humidity-sensor--and-energy-plugs-)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+# Project Contents
+
 # Pages folder
 Here you will find the majority of code for our website.
 
@@ -108,7 +163,7 @@ This library allows the raspberry pi to collect the data being measured by the D
 # Software Flow chart
 ![Image](./images/flowchart.jpg)
 
-# Dev/buildtool information:
+# Dev/buildtool information
 React 17.0.1 with axios 0.21.1, follow-redirects 1.13.3, bootstrap 4.6.0, and influx-api 0.1.4. Influxdb-1.8.4 with Grafana 7.4.5 and Python 3.8.
 
 ## Installation Process For the Website
@@ -116,7 +171,7 @@ React 17.0.1 with axios 0.21.1, follow-redirects 1.13.3, bootstrap 4.6.0, and in
 Note: This guide assumes you have a raspberry pi setup and ready to work. There are many far better guides that would explain better than we could such as out there such as (**https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up**)
 
 
-## Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:
+## Installation Process For the Temperature and Humidity Sensor, and Energy Plugs
 
 1 - Download the code in the software branch into the home directory of your raspberry pi.
 
