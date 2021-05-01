@@ -30,6 +30,7 @@ DHT22 temperature and humidity sensor datasheet:
 ![Image](./images/dht22sheet.png)
 
 Overall project specifications:
+
 ![Image](./images/specific.png)
 
 ## Setting up the Temperature and Humidity Sensor
