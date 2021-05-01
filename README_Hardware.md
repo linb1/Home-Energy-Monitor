@@ -18,6 +18,10 @@ A picture of what the temperature and humidity sensor looks like:
 A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 ![Image](./images/plugsandiota.png)
 
+## Bill of Materials
+
+![Image](./images/bom.png)
+
 ## Setting up the Temperature and Humidity Sensor
 This process is really simple:
 
