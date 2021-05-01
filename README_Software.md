@@ -219,4 +219,4 @@ When all software and hardware are installed properly and connected to power, yo
 
 Simply reboot the Raspberry Pi, and wait 3-5 minutes for it to boot up.
 
-Then, open this url **localhost:3000** and that's it! You will open the website with this and you will be able to navigate and use it.
+Then, open this url **localhost:4000** and that's it! You will open the website with this and you will be able to navigate and use it.
