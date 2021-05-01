@@ -23,6 +23,14 @@ A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 
 ![Image](./images/bomo.png)
 
+## Datasheets and Specifications
+
+DHT22 temperature and humidity sensor datasheet:
+![Image](./images/dht22.png)
+
+Overall project specifications:
+![Image](./images/specif.png)
+
 ## Setting up the Temperature and Humidity Sensor
 This process is really simple:
 
