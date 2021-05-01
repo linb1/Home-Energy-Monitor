@@ -2,13 +2,13 @@
 ## Schematics and Pictures
 
 A rough schematic of the temperature and humidity sensor:
-![Image](./images/Raspberry pi schematic.png)
+![Image](./images/tempschematic.png)
 
 A picture of what the temperature and humidity sensor looks like:
 ![Image](./images/sensor.png)
 
 A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
-![Image](./images/plugs and IoTaWatt.png)
+![Image](./images/plugsandiota.png)
 
 ## Setting up the Temperature and Humidity Sensor:
 This process is really simple:
