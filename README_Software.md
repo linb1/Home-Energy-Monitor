@@ -50,6 +50,7 @@ Team Greener Living
 - [Dev/buildtool information:](#dev-buildtool-information-)
 - [Installation Process For the Raspberry Pi](#installation-process-for-the-raspberry-pi)
 - [Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:](#installation-process-for-the-temperature-and-humidity-sensor--and-energy-plugs-)
+- [Running the Website](#running-the-website)
 
 
 # Project Contents
@@ -205,3 +206,11 @@ Finally, you need to start and enable the services using this for each service:
 > sudo systemctl start launchplug.service
 
 With this the services and your data collection codes are ready. If your hardware is setup properly, these scripts should run immediately on startup.
+
+## Running the website
+
+When all software and hardware are installed properly and connected to power, you are ready to connect to the website.
+
+Simply reboot the Raspberry Pi, and wait 3-5 minutes for it to boot up.
+
+Then, open this url **localhost:3000** and that's it! You will open the website with this and you will be able to navigate and use it.
