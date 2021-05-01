@@ -1,4 +1,4 @@
-# Table of Content
+# Table of Contents
 
 - [Schematics and Pictures](#schematics-and-pictures)
 - [Bill of Materials](#bill-of-materials)
