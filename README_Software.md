@@ -48,10 +48,8 @@ Team Greener Living
 - [Adafruit_Python_DHT](#adafruit-python-dht)
 - [Software Flow chart](#software-flow-chart)
 - [Dev/buildtool information:](#dev-buildtool-information-)
-  * [Installation Process For the Website](#installation-process-for-the-website)
-  * [Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:](#installation-process-for-the-temperature-and-humidity-sensor--and-energy-plugs-)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+- [Installation Process For the Website](#installation-process-for-the-website)
+- [Installation Process For the Temperature and Humidity Sensor, and Energy Plugs:](#installation-process-for-the-temperature-and-humidity-sensor--and-energy-plugs-)
 
 
 # Project Contents
