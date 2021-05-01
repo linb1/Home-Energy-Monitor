@@ -2,6 +2,7 @@
 
 - [Schematics and Pictures](#schematics-and-pictures)
 - [Bill of Materials](#bill-of-materials)
+- [Datasheets and Specifications](#datasheets-and-specifications)
 - [Setting up the Temperature and Humidity Sensor:](#setting-up-the-temperature-and-humidity-sensor)
 - [Setting up the Etekcity ESW15 Energy plugs:](#setting-up-the-etekcity-esw15-energy-plugs)
 - [Setting up the IoTaWatt](#setting-up-the-iotawatt)
@@ -26,10 +27,10 @@ A picture of the IoTaWatt with the line splitters and the ESW15 energy plugs
 ## Datasheets and Specifications
 
 DHT22 temperature and humidity sensor datasheet:
-![Image](./images/dht22.png)
+![Image](./images/dht22sheet.png)
 
 Overall project specifications:
-![Image](./images/specif.png)
+![Image](./images/specific.png)
 
 ## Setting up the Temperature and Humidity Sensor
 This process is really simple:
