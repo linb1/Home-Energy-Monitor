@@ -4,4 +4,4 @@ This is the Github Repository for Team 18: Greener Living of the Boston Universi
 
 To setup the hardware, checkout **README_Hardware.md.**
 
-To setup the software, checkout **README_Software.md.**
+To setup the software, checkout **README_Software.md.** and the Software and website folders.
