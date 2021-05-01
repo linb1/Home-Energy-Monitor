@@ -2,13 +2,13 @@
 
 This is the Github Repository for Team 18: Greener Living of the Boston University 2020/2021 Senior Design Projects.
  
-Goals
+**Goals**
 
 With the rise of many environmental issues in the 21st century, it is more important than ever to reduce our individual carbon footprint. By having access to one's utility usage at all times, it becomes easier to make energy- efficient decisions without relying solely on the monthly bill. This project consists of sensors that log relevant data about the user’s household, a database that stores the information collected, and a web application that visualizes the data using graphs and charts. Our approach is to install a monitor and sensors to measure the home’s electricity, temperature, and humidity at a constant rate throughout the day. Then, using the home’s local network, they will write the data to our database, which our web application and other tools will be able to access to provide an end-to-end product. The main feature of this project is the system's ability to update at a constant rate, providing accurate information whenever the user uses the web application. As a result, the user can see a detailed analysis of their energy usage than they would get from their monthly bill.
 
 The goal of our project is to create a system of sensors that records various data in a house such temperature, humidity and the energy used by different appliances, then show this data in an easy-to-see, intuitive way on a local website.
  
-Description
+**Description**
 
 Greener Living is a web application with a hardware component that allows for monitoring energy usage in real-time. 
 
@@ -16,7 +16,7 @@ The hardware components consist of DHT sensors for measuring the temperature and
 
 InfluxDB stores the data collected while Grafana uses it to form graphs. Using iframes in our web-application, we utilize the information to display it properly so that users can monitor their energy usage in real time and can view data as far as a year prior. Our notifications tell the user if there is any issue such as a spike or a drop in energy consumption which can help the user identify any issues with their appliances. Our weather API also allows for the user to see current temperatures in any city they search for. This can help users compare the indoor temperature monitored by the hardware with outside temperatures.
 
-Design
+**Design**
 
 Our website consists of a homepage in which the user can see visualizations of data such as yearly electricity rates and yearly dioxide emissions for Massachusetts. It contains a navigation bar that allows users to click on several options; Home, Appliances, Rooms, Costs, Notifications, and Weather.
 
@@ -32,13 +32,21 @@ Weather contains a searchable weather API for any city in which the user wants t
  
 ## Repository TOC
 Software
+
 Images
+
 node_modules
+
 Reports
+
 Website
+
 README.md
+
 README_Hardware.md
+
 README_Software.md
+
 Package-lock.json
  
 ## Visuals
@@ -50,6 +58,7 @@ Package-lock.json
 
 
 ## Installation
+
 To setup the hardware, checkout **README_Hardware.md.**
 
 To setup the software, checkout **README_Software.md.**
@@ -63,13 +72,19 @@ npm install
 ```
  
 ## Support
+
 Please refer to README_Software and README_Hardware for technical specifications and details.
+
 For other resources, please visit the following links for documentation:
  
 [React JS](https://reactjs.org/)
+
 [InfluxDB](https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/)
+
 [Grafana](https://grafana.com/docs/)
+
 [IoTaWatt](https://docs.iotawatt.com/en/02_05_12/)
+
 [Raspberry Pi](https://pimylifeup.com/raspberry-pi-humidity-sensor-dht22/#:~:text=The%20DHT22%20is%20a%20versatile,away%20from%20the%20Raspberry%20Pi.)
  
 ## Contributing
@@ -81,12 +96,19 @@ Please make sure to update as appropriate.
  
  
 ## Authors and Acknowledgment
+
 Thanks to everyone on the Greener Living Team for contributing in the completion of the project:
+
 Jovany Vazquez
+
 Brian Lin
+
 Jason Hu
+
 Ali Areiqat
+
 Yang Hang Liu
  
 ## Project status
+
 The project is complete and operating as required by the client
