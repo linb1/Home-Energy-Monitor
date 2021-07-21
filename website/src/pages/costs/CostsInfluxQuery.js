@@ -4,7 +4,7 @@ import { query } from 'influx-api';
 
 const influx_url = 'http://10.0.0.61:8086';
 const eia_url = 'http://api.eia.gov/series/?api_key=f9cade4e03536c5e212cc61313cfb4ac&series_id=ELEC.PRICE.MA-ALL.A';
-var DB_valueHR , DB_valueDAY , DB_valueWEEK , DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH, rate;
+var DB_valueHR, DB_valueDAY, DB_valueWEEK, DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH, rate;
 
 var currentdate = new Date();
 var monthago = new Date(new Date().getTime() - (30 * 24 * 60 * 60 * 1000));
@@ -91,8 +91,8 @@ export const getData_influx = async (qtype, field, measurement, length, source, 
     if (period[15] == ':') {
         period = period.substring(0, 14) + '0' + period.substring(14, period.length);
     }
-    
-    var request = 'SELECT ' + qtype + '('+ field +') FROM ' + '"' + measurement + '"' + ' WHERE time >= ' + "'" + period + "'" + ' and ' + source + ' = ' + "'" + name + "'";
+
+    var request = 'SELECT ' + qtype + '(' + field + ') FROM ' + '"' + measurement + '"' + ' WHERE time >= ' + "'" + period + "'" + ' and ' + source + ' = ' + "'" + name + "'";
     try {
         const result = await query({
             url: influx_url,
@@ -100,26 +100,26 @@ export const getData_influx = async (qtype, field, measurement, length, source, 
             db: database
         });
         return result.data.results[0].series[0].values[0][1];
-    } 
+    }
     catch (error) {
         return 'NA';
     }
 }
 
 async function logData() {
-    var gotData_hr = await getData_influx('sum', 'Watts', 'iotawatt', 'hour', 'ct', 'laptop', 'iota');
-    var gotData_day = await getData_influx('sum', 'Watts', 'iotawatt','day', 'ct', 'laptop','iota');
-    var gotData_week = await getData_influx('sum', 'Watts', 'iotawatt','week', 'ct', 'laptop','iota');
-    var gotData_month = await getData_influx('sum', 'Watts', 'iotawatt','month', 'ct', 'laptop','iota');
+    var gotData_hr = await getData_influx('mean', 'Watts', 'iotawatt', 'hour', 'ct', 'laptop', 'iota');
+    var gotData_day = await getData_influx('mean', 'Watts', 'iotawatt', 'day', 'ct', 'laptop', 'iota');
+    var gotData_week = await getData_influx('mean', 'Watts', 'iotawatt', 'week', 'ct', 'laptop', 'iota');
+    var gotData_month = await getData_influx('mean', 'Watts', 'iotawatt', 'month', 'ct', 'laptop', 'iota');
 
     DB_valueHR = gotData_hr;
     DB_valueDAY = gotData_day;
     DB_valueWEEK = gotData_week;
     DB_valueMONTH = gotData_month;
-    cost_HR = (gotData_hr/1000) * rate;
-    cost_DAY = (gotData_day/1000) * rate;
-    cost_WEEK = (gotData_week/1000) * rate;
-    cost_MONTH = (gotData_month/1000) * rate;
+    cost_HR = (gotData_hr / 10000) * rate;
+    cost_DAY = (gotData_day * 24 / 10000) * rate;
+    cost_WEEK = (gotData_week * 168 / 10000) * rate;
+    cost_MONTH = (gotData_month * 720 / 10000) * rate;
 
 }
 
@@ -128,7 +128,7 @@ async function logData_eia() {
     rate = gotData;
 }
 
-export { DB_valueHR, DB_valueDAY, DB_valueWEEK, DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH};
+export { DB_valueHR, DB_valueDAY, DB_valueWEEK, DB_valueMONTH, cost_HR, cost_DAY, cost_WEEK, cost_MONTH };
 
 
 // DB_value = await logData();

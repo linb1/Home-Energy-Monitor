@@ -93,27 +93,27 @@ class Home extends Component {
         return (
             <div className='home'>
                 <div className='row-welcome'>
-                <h1 className='welcome-text'>
-                    Welcome, Professor
+                    <h1 className='welcome-text'>
+                        Welcome, Professor
                 </h1>
                 </div>
 
                 <div className='row-grafana'>
-                <iframe src="http://localhost:8989/d-solo/f-8LtqXGz/homepage-grafana?orgId=1&refresh=5s&panelId=4" width="500" height="250" frameborder="0"></iframe>
-                <iframe src="http://localhost:8989/d-solo/f-8LtqXGz/homepage-grafana?orgId=1&refresh=5s&panelId=2" width="500" height="250" frameborder="0"></iframe>
+                    <iframe src="http://localhost:8989/d-solo/f-8LtqXGz/homepage-grafana?orgId=1&refresh=5s&panelId=4" width="500" height="250" frameborder="0"></iframe>
+                    <iframe src="http://localhost:8989/d-solo/f-8LtqXGz/homepage-grafana?orgId=1&refresh=5s&panelId=2" width="500" height="250" frameborder="0"></iframe>
                 </div>
 
                 <div className='row-hgraph'>
-                        <CanvasJSChart options={chart1}/>
+                    <CanvasJSChart options={chart1} />
 
-                        <CanvasJSChart options={chart2}/>
+                    <CanvasJSChart options={chart2} />
                 </div>
-                
-                 <div className='row-box'>
+
+                <div className='row-box'>
                     <div className='box'>
                         <img src={lightning} style={symbol} className="greener-living-logo" alt="lightning" />
                         <text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        For the year 
+                        For the year
                        <br />
                         </text>
                         <text style={big}>
@@ -126,7 +126,7 @@ class Home extends Component {
                             That's enough to power BU for {((total * 1000000) / BU_usage).toFixed(2)} school years!
                     </text>
                     </div>
-                </div> 
+                </div>
 
             </div>
 
